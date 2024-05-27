@@ -1,0 +1,9 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/workspaces/linked_list/build",
+            "binaryPath": "/workspaces/linked_list/build/main",
+            "binaryArgs": []
+        }
+    ]
+}
