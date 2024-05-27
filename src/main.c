@@ -7,8 +7,9 @@ int main()
     linked_list_append(head, (void*)"Hello World");
 
     printf("%ld\n", linked_list_get_size(head));
-    printf("%s\n", (const char*)(head + 1)->data);
+    printf("%s\n", (const char*)head->next->data);
 
     free(head);
+    free(head->next);
     return 0;
 }
