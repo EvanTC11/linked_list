@@ -41,3 +41,35 @@ void linked_list_append(Node* head, void* data)
 
     ptr->next = new;
 }
+
+Node* linked_list_at_index(Node* head, size_t index)
+{
+    if (index > linked_list_get_size(head))
+    {
+        return NULL;
+    }
+
+    if (index == 0)
+    {
+        return head;
+    }
+
+    Node* ptr = head;
+    for (size_t i = 0; i < index; i++)
+    {
+        ptr = ptr->next;
+    }
+
+    return ptr;
+}
+
+void linked_list_free(Node* head)
+{
+    Node* ptr = head;
+    while (ptr->next)
+    {
+        Node* prev = ptr;
+        ptr = ptr->next;
+        free(prev);
+    }
+}
