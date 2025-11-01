@@ -10,6 +10,7 @@ typedef struct Node
     void* data; 
 
     bool is_head;
+    bool allocated;
 } Node;
 
 void node_create(void* data, Node* node, Node* prev);
